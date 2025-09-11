@@ -19,6 +19,7 @@ h1 {
   grid-column: 2;
   text-align: center;
   font-size: 2rem;
+  color:  rgb(130, 191, 211);
 }
 header{
  display: grid;
@@ -61,7 +62,7 @@ section.campus {
 }
 
 section {
-  border: 2px solid  #f4f4f4;
+  border: 2px solid  rgba(173, 216, 230, 0.805);
   padding: 1em;
   background-color: #fafafa;
   border-radius: 10px;
@@ -136,7 +137,7 @@ section {
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  color: #000;
+  color:  rgb(126, 190, 211);
   cursor: pointer;
   user-select: none;
   z-index: 10;
