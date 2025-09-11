@@ -29,3 +29,47 @@ body {
   background-color: rgb(248, 232, 242);
   margin: 0;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px;
+}
+
+.photo-show {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.photo-show h2 {
+  margin-bottom: 15px;
+  color: rgb(99, 64, 80);
+}
+
+.photo-show img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.photo-show button {
+  padding: 10px 15px;
+  background-color: rgb(246, 220, 236);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(70, 50, 60);
+  transition: background 0.3s;
+}
+
+.photo-show button:hover {
+  background-color: rgb(230, 190, 210);
+}
