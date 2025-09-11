@@ -1,8 +1,12 @@
-.foto{
+.klasI img{
+    height: 300px;
+    width: 300px;
+}
+.campus img {
     height: 10px;
     width: 10px;
 }
-.foto1{
-    height: 10px;
-    width: 10px;
+.klasJ img{
+  height: 10px;
+  width: 10px;  
 }
