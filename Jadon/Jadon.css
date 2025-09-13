@@ -1,0 +1,14 @@
+header {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    justify-self: center;
+}
+body {
+    background-color: lightblue;
+}
