@@ -13,10 +13,10 @@ De squadpage is bedoeld om:
 
 ##  Inhoud
 De squadpage bevat:
-- 👥 Alle squadleden van **squad 1I** en **squad 1J**  
-- 📸 Mugshots (foto’s) van de squadleden.  
-- 🔗 Links naar de visitekaartjes van de squadleden.
--  **Campusfoto’s**: de campus wordt getoond met een **fading effect**, waarbij je steeds verschillende foto’s van de campus ziet. Dit zorgt voor een dynamische en visueel aantrekkelijke achtergrond.
+- Alle squadleden van **squad 1I** en **squad 1J**  
+- Mugshots (foto’s) van de squadleden.  
+- Links naar de visitekaartjes van de squadleden.
+- Campusfoto’s: de campus wordt getoond met een **fading effect**, waarbij je steeds verschillende foto’s van de campus ziet. Dit zorgt voor een dynamische en visueel aantrekkelijke achtergrond.
 
 ##  Over ons
 Wij zijn studenten van **Front-end Design & Development (FDND)**.  
