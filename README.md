@@ -21,8 +21,8 @@ De squadpage bevat:
 ##  Over ons
 Wij zijn studenten van **Front-end Design & Development (FDND)**.  
 Met deze squadpage leren we samenwerken met GitHub en bouwen we samen aan een overzicht van onze klas.  
-- Heba Handouka — [@handouh1](https://github.com/handouh1)  
-- Angel .. —      [@Angelaaliyah12](https://github.com/Angelaaliyah12)  
-- Jadon —         [@Jadonfdnd](https://github.com/Jadonfdnd)   
+- Heba Handouka — [@handouh1](https://github.com/handouh1) - Klas 1J
+- Angel .. —      [@Angelaaliyah12](https://github.com/Angelaaliyah12) - Klas 1J 
+- Jadon —         [@Jadonfdnd](https://github.com/Jadonfdnd) - Klas 1I 
 
  *Laatste update: 17 september 2025*
