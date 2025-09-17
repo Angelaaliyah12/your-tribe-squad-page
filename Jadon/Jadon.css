@@ -11,4 +11,22 @@ header {
 }
 body {
     background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.klasi {
+    background-color: white;
+
+}
+
+.logo {
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
 }
