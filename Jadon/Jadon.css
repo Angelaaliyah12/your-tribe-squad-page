@@ -1,0 +1,32 @@
+header {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    justify-self: center;
+}
+body {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.klasi {
+    background-color: white;
+
+}
+
+.logo {
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+}
