@@ -23,7 +23,6 @@ Wij zijn studenten van **Front-end Design & Development (FDND)**.
 Met deze squadpage leren we samenwerken met GitHub en bouwen we samen aan een overzicht van onze klas.  
 - Heba Handouka — [@handouh1](https://github.com/handouh1)  
 - Angel .. —      [@Angelaaliyah12](https://github.com/Angelaaliyah12)  
-- Jadon —         [@Jadonfdnd](https://github.com/Jadonfdnd)  
-- 
+- Jadon —         [@Jadonfdnd](https://github.com/Jadonfdnd)   
 
  *Laatste update: 17 september 2025*
