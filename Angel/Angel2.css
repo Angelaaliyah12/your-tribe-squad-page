@@ -32,3 +32,49 @@
   90% { background-image: url(../fotos/campus/8.jpg); } 
   100% { background-image: url(../fotos/campus/9.jpg); }
 }
+
+.player{
+float: left;
+  width: 20%;
+  /* padding: 10px; */
+  box-sizing: border-box;
+}
+ .player img {
+  opacity: 0.8; /*hoe transparant de img zijn*/
+  cursor: pointer; /*muis verandert in een hand zodat het aangeeft dat het klikbaar is*/
+  width: 80px;
+  max-width: 120px;
+ }
+ 
+
+ .player img:hover {
+  opacity: 1;
+}
+.players-i::after{
+content: ""; /* maakt een leeg element aan*/
+  display: table; /* zegt dat het lege element een blokachtige element is die ruimte inneemt*/
+  clear: both; /* forceert om niet naast float elementen te staan maar juist erna komt */
+}
+.container{
+      position: relative;
+
+    display:none; /* grote afbeelding is standaard ontzichtbaar tot dat je op de andere afbeeldingen klikt*/
+    width: 20%;
+  margin: 20px auto;
+  /* border: 2px solid white; */
+}
+
+#expandedImg {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* text bij groote afbeelding*/
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 90px;
+}
