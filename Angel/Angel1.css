@@ -1,0 +1,47 @@
+/* Zorg dat de link geen underline krijgt */
+a {
+    text-decoration: none; /* verwijdert underline van de link */
+}
+
+h1{
+    color: white;
+    font-size: 100px;
+    animation: floatUpDown 1s ease-in-out infinite;
+
+}
+
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* H2 styling blijft zoals eerder */
+h2 {
+    color: green;
+    margin: -60px;
+    font-size: 50px;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid green;  /* dikte en kleur van de rand */
+    border-radius: 20px;
+    padding: 10px 20px;       /* ruimte tussen tekst en rand */
+
+}
+
+h2:hover {
+    transform: scale(1.2);
+    color: lime;
+}
+
+
+body {
+    flex-direction: column;   
+    background-color: black;
+    height: 100vh;              /* hele schermhoogte */
+    margin: 0;                  /* standaardmarges weghalen */
+    display: flex;              /* flexbox activeren */
+    justify-content: center;    /* verticaal centreren */
+    align-items: center;        /* horizontaal centreren */
+}

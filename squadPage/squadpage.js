@@ -1,63 +1,54 @@
-// ================= FUNCTIE VOOR CAROUSEL =================
-function setupCarousel(mainImgId, wrapperId) {
-  const hoofdfoto = document.getElementById(mainImgId);
-  const miniwrapper = document.getElementById(wrapperId);
-  const minifotos = miniwrapper.querySelectorAll("img");
-  const visibleCount = 4;
-  let currentIndex = 0;
+// Functie voor volgende afbeelding met de pijltjes
+function volgendeimg(klas) {
+    const hoofdImg = document.getElementById(klas === 'I' ? 'hoofd-i' : 'hoofd-j'); // als klas gelijk is aan (dat zijn de (===)) 'I' ga dan naar hoofd-i
+    const miniWrapper = document.getElementById(klas === 'I' ? 'miniwrapper' : 'klasj-wrapper');
+    const miniImgs = miniWrapper.querySelectorAll('img');
 
-  // Start met eerste foto
-  changeImage(minifotos[0]);
+    let currentIndex = Array.from(miniImgs).findIndex(img => img.classList.contains('active'));
+    let nextIndex = (currentIndex + 1) % miniImgs.length;
 
-  // Klik op thumbnail
-  minifotos.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      currentIndex = index;
-      changeImage(img);
-      updateCarousel();
-    });
-  });
+    // Hoofdafbeelding updaten
+    hoofdImg.src = miniImgs[nextIndex].src;
 
-  function changeImage(imgElement) {
-    hoofdfoto.src = imgElement.src;
-    minifotos.forEach((img) => img.classList.remove("active"));
-    imgElement.classList.add("active");
-  }
+    // Mini-foto active class updaten
+    miniImgs.forEach(img => img.classList.remove('active'));
+    miniImgs[nextIndex].classList.add('active');
 
-  function updateCarousel() {
-    const offset = Math.max(0, currentIndex - Math.floor(visibleCount / 2));
-    const maxOffset = minifotos.length - visibleCount;
-    const clampedOffset = Math.min(offset, maxOffset);
-    const scrollX = clampedOffset * (70 + 10); // 70px breed + 10px gap
-    miniwrapper.style.transform = `translateX(-${scrollX}px)`;
-  }
-
-  // Functies voor pijlen
-  function volgendeimg() {
-    currentIndex = (currentIndex + 1) % minifotos.length;
-    changeImage(minifotos[currentIndex]);
-    updateCarousel();
-  }
-
-  function vorigeimg() {
-    currentIndex = (currentIndex - 1 + minifotos.length) % minifotos.length;
-    changeImage(minifotos[currentIndex]);
-    updateCarousel();
-  }
-
-  // Koppel pijlen (via class in dezelfde sectie)
-  const sectie = miniwrapper.closest("section");
-  const pijlRechts = sectie.querySelector(".pijl.rechts");
-  const pijlLinks = sectie.querySelector(".pijl.links");
-
-  if (pijlRechts) pijlRechts.addEventListener("click", volgendeimg);
-  if (pijlLinks) pijlLinks.addEventListener("click", vorigeimg);
+    // Scroll de mini-foto in beeld (optioneel)
+    miniImgs[nextIndex].scrollIntoView({ behavior: 'smooth', inline: 'center' });
 }
 
-// ================= INIT =================
-// Klas I
-setupCarousel("hoofdfoto", "miniwrapper");
-// Klas J
-setupCarousel("hoofd-j", "klasj-wrapper");
-// Campus
-setupCarousel("hoofdcampus", "campus-wrapper");
+// Functie voor vorige afbeelding
+function vorigeimg(klas) {
+    const hoofdImg = document.getElementById(klas === 'I' ? 'hoofd-i' : 'hoofd-j');
+    const miniWrapper = document.getElementById(klas === 'I' ? 'miniwrapper' : 'klasj-wrapper');
+    const miniImgs = miniWrapper.querySelectorAll('img');
+
+    let currentIndex = Array.from(miniImgs).findIndex(img => img.classList.contains('active'));
+    let prevIndex = (currentIndex - 1 + miniImgs.length) % miniImgs.length;
+
+    // Hoofdafbeelding updaten
+    hoofdImg.src = miniImgs[prevIndex].src;
+
+    // Mini-foto active class updaten
+    miniImgs.forEach(img => img.classList.remove('active'));
+    miniImgs[prevIndex].classList.add('active');
+
+    // Scroll de mini-foto in beeld
+    miniImgs[prevIndex].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+}
+
+// Klikken op een mini-foto om hoofdafbeelding te veranderen
+document.querySelectorAll('.minis img, .mini-j img').forEach(img => {
+    img.addEventListener('click', function() {
+        const wrapper = img.parentElement.parentElement;
+        const hoofdImg = wrapper.previousElementSibling.querySelector('img');
+        
+        // Hoofdafbeelding updaten
+        hoofdImg.src = img.src;
+
+        // Active class updaten
+        wrapper.querySelectorAll('img').forEach(i => i.classList.remove('active'));
+        img.classList.add('active');
+    });
+});
