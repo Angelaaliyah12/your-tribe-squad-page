@@ -107,8 +107,9 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
   body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   
   }
 
   section.klasI, section.klasJ {
@@ -139,9 +140,12 @@ section {
 /* Mini foto's */
 .minifotos,
 .mini-j {
-  overflow: hidden;
-  width: calc(70px * 4 + 10px * 3);
-  margin: 0 auto;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0,5em;
+  
 }
 
 .minis,
@@ -153,8 +157,8 @@ section {
 
 .minis img,
 .mini-j img {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
@@ -170,10 +174,10 @@ section {
 
 /* Pijltjes buiten de container en stilstaand */
 .pijl {
-  position: fixed; /* blijft stil staan */
+  position:absolute; 
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
+  font-size: 45px;
   color: rgb(126, 190, 211);
   cursor: pointer;
   user-select: none;
