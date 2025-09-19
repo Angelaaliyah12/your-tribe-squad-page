@@ -1,12 +1,21 @@
-function myFunction(imgs) {
-  // Get the expanded image
-  var expandImg = document.getElementById("expandedImg");
-  // Get the image text
-  var imgText = document.getElementById("imgtext");
-  // Use the same src in the expanded image as the image being clicked on from the grid
-  expandImg.src = imgs.src;
-  // Use the value of the alt attribute of the clickable image as text inside the expanded image
-  imgText.innerHTML = imgs.alt;
-  // Show the container element (hidden with CSS)
-  expandImg.parentElement.style.display = "block";
+function myFunction(img) {
+  const src = img.src;
+  const alt = img.alt;
+
+  // Bepaal of het I of J is
+  const isClassI = img.closest(".players-i") !== null;
+  const isClassJ = img.closest(".players-j") !== null;
+
+  if (isClassI) {
+    document.getElementById("expandedImg-i").src = src;
+    document.getElementById("imgtext-i").innerText = alt;
+    document.querySelector(".container-i").style.display = "block";
+  }
+
+  if (isClassJ) {
+    document.getElementById("expandedImg-j").src = src;
+    document.getElementById("imgtext-j").innerText = alt;
+    document.querySelector(".container-j").style.display = "block";
+  }
 }
+
