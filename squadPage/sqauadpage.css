@@ -155,6 +155,21 @@ section {
   object-fit: contain;
   border-radius: 8px;
 }
+.hoofd-foto figcaption {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+
+/* Mini foto's */
+.minifotos,
+.mini-j {
+  overflow: hidden;
+  width: calc(70px * 4 + 10px * 3);
+  margin: 0 auto;
+}
 
 /* Mini foto's */
 .minifotos,
@@ -195,7 +210,7 @@ section {
   transform: translateY(-50%);
   font-size: 40px;
   color: rgb(126, 190, 211);
-  cursor: pointer;
+  cursor: auto;
   user-select: none;
   z-index: 10;
 }
